@@ -1,0 +1,15 @@
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\obj\Debug\net6.0\jeupendu.csproj.AssemblyReference.cache
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\obj\Debug\net6.0\jeupendu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\obj\Debug\net6.0\jeupendu.AssemblyInfoInputs.cache
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\obj\Debug\net6.0\jeupendu.AssemblyInfo.cs
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\obj\Debug\net6.0\jeupendu.csproj.CoreCompileInputs.cache
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\bin\Debug\net6.0\jeupendu.exe
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\bin\Debug\net6.0\jeupendu.deps.json
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\bin\Debug\net6.0\jeupendu.runtimeconfig.json
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\bin\Debug\net6.0\jeupendu.dll
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\bin\Debug\net6.0\jeupendu.pdb
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\obj\Debug\net6.0\jeupendu.dll
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\obj\Debug\net6.0\refint\jeupendu.dll
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\obj\Debug\net6.0\jeupendu.pdb
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\obj\Debug\net6.0\jeupendu.genruntimeconfig.cache
+C:\Users\Antoine\Documents\créations\MYGProjet2\jeupendu\obj\Debug\net6.0\ref\jeupendu.dll

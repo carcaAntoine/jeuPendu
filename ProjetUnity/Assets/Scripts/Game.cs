@@ -54,7 +54,7 @@ public class Game : MonoBehaviour
         
         
         DisplayPendu(spriteIndex);
-        startGame();
+        StartGame();
     }
 
     void DisplayPendu(int i)
@@ -62,7 +62,7 @@ public class Game : MonoBehaviour
         potenceImage[0].transform.GetComponent<Image>().sprite = sprites[i];
     }
 
-    void startGame() //Lancement du jeu et préparation du mot à trouver
+    void StartGame() //Lancement du jeu et préparation du mot à trouver
     {
         //Création nombre aléatoire pour désigner le mot choisi 
         System.Random rdn = new System.Random();
@@ -80,10 +80,10 @@ public class Game : MonoBehaviour
         // ----------- DEBUG ----------- //
         Debug.Log(correctWord);
         // ----------------------------- //
-        showMyWord();
+        ShowMyWord();
     }
 
-    void showMyWord() // Montre le mot de l'utilisateur (affiche les lettres trouvées et "_" pour les lettres pas encore trouvées)
+    void ShowMyWord() // Montre le mot de l'utilisateur (affiche les lettres trouvées et "_" pour les lettres pas encore trouvées)
     {
         WordToFindText.text = ""; // Empêche le mot de se démultiplier à l'affichage
         foreach (string lettreToShow in myWordLetters)
@@ -95,41 +95,41 @@ public class Game : MonoBehaviour
     void ReadStringInput(string s) //Récupère la valeur de l'Input Field
     {
 
-        myLetter = s;
+        myLetter = s.ToLower();
         alreadyTriedMessage.SetActive(false);
         if (myLetter.Length == 1 && !gameIsOver)
         {
-            gameInProgress();
+            GameInProgress();
         }
 
     }
 
-    void gameInProgress()
+    void GameInProgress()
     {
-        checkIfLetterIsValid();
+        CheckIfLetterIsValid();
 
         if (letterIsValid) //Ne vérifie si la lettre est bonne que si elle n'a pas déjà été tentée
         {
-            checkIfLetterIsGood();
+            CheckIfLetterIsGood();
         }
         else
         {
             letterIsValid = true; //remise valeur par défaut
         }
 
-        showMyWord();
+        ShowMyWord();
         Debug.Log("nombre de bonnes lettres : " + goodLettersCounter);
         Debug.Log("nombre de lettres à trouver : " + correctWordLetters.Count);
 
         if (PV == 0 || goodLettersCounter == correctWordLetters.Count)
         {
 
-            GameOver();
+            EndGame();
         }
 
     }
 
-    void checkIfLetterIsValid() // Vérifie que la lettre n'a pas déjà été proposée
+    void CheckIfLetterIsValid() // Vérifie que la lettre n'a pas déjà été proposée
     {
         // Vérifie pour les lettres correctes
         for (int correctLetter = 0; correctLetter < myWordLetters.Count; correctLetter++)
@@ -154,7 +154,7 @@ public class Game : MonoBehaviour
         }
     }
 
-    void checkIfLetterIsGood() //compare la lettre de l'utilisateur avec toutes les lettres du mot à trouver
+    void CheckIfLetterIsGood() //compare la lettre de l'utilisateur avec toutes les lettres du mot à trouver
     {
         int compteurWrongLetter = 0;
 
@@ -187,7 +187,7 @@ public class Game : MonoBehaviour
         compteurWrongLetter = 0;
     }
 
-    void GameOver() //Finit la partie (gagné ou perdu)
+    void EndGame() //Finit la partie (gagné ou perdu)
     {
         gameIsOver = true;
 
@@ -216,7 +216,7 @@ public class Game : MonoBehaviour
         GameOverCanvas.SetActive(true);
     }
 
-    public void newGame()
+    public void NewGame()
     {
 
         PV = 7;
@@ -234,7 +234,7 @@ public class Game : MonoBehaviour
 
     }
 
-    public void doExitGame()
+    public void DoExitGame()
     {
         Application.Quit();
     }

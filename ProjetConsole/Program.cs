@@ -25,7 +25,7 @@ namespace jeupendu
         {
             while (isApplication == true)
             {
-                startGame();
+                StartGame();
                 //gameInProgress();
                 
             }
@@ -37,7 +37,7 @@ namespace jeupendu
         //-------------------------------------------------- FONCTIONS ---------------------------------------------------//
         //----------------------------------------------------------------------------------------------------------------//
 
-        static void startGame() //Lancement du jeu et préparation du mot à trouver
+        static void StartGame() //Lancement du jeu et préparation du mot à trouver
         {
             Console.WriteLine("######################");
             Console.WriteLine("#### Jeu du Pendu ####");
@@ -62,16 +62,16 @@ namespace jeupendu
             // ----------- DEBUG ----------- //
             Console.WriteLine(correctWord);
             // ----------------------------- //
-            gameInProgress();
+            GameInProgress();
         }
 
-        static void gameInProgress()
+        static void GameInProgress()
         {
             while (PV > 0 && goodLettersCounter != correctWordLetters.Count)
             {
                 //Demande la lettre de l'utilisateur
                 Console.WriteLine("\nÉcrivez une lettre : ");
-                showWrongLetters();
+                ShowWrongLetters();
                 myLetter = Console.ReadLine();
                 if (myLetter.Length != 1)
                 {
@@ -80,25 +80,25 @@ namespace jeupendu
                 else
                 {
                     Console.WriteLine("-----------------------");
-                    checkIfLetterIsValid();
+                    CheckIfLetterIsValid();
 
                     if (letterIsValid) //Ne vérifie si la lettre est bonne que si elle n'a pas déjà été tentée
                     {
-                        checkIfLetterIsGood();
+                        CheckIfLetterIsGood();
                     }
                     else
                     {
                         letterIsValid = true; //remise valeur par défaut
                     }
 
-                    showMyWord();
+                    ShowMyWord();
                 }
             }
 
-            GameOver();
+            EndGame();
         }
 
-        static void showWrongLetters() //Affiche les lettres déjà tentées
+        static void ShowWrongLetters() //Affiche les lettres déjà tentées
         {
             Console.WriteLine("Lettres incorrectes déjà tentées : ");
             for (int wrongLetter = 0; wrongLetter < wrongLettersList.Count; wrongLetter++)
@@ -109,7 +109,7 @@ namespace jeupendu
 
         }
 
-        static void checkIfLetterIsValid() // Vérifie que la lettre n'a pas déjà été proposée
+        static void CheckIfLetterIsValid() // Vérifie que la lettre n'a pas déjà été proposée
         {
             // Vérifie pour les lettres correctes
             for (int correctLetter = 0; correctLetter < myWordLetters.Count; correctLetter++)
@@ -134,7 +134,7 @@ namespace jeupendu
 
 
 
-        static void checkIfLetterIsGood() //compare la lettre de l'utilisateur avec toutes les lettres du mot à trouver
+        static void CheckIfLetterIsGood() //compare la lettre de l'utilisateur avec toutes les lettres du mot à trouver
         {
             int compteurWrongLetter = 0;
 
@@ -163,7 +163,7 @@ namespace jeupendu
             compteurWrongLetter = 0;
         }
 
-        static void showMyWord() // Montre le mot de l'utilisateur (affiche les lettres trouvées et "_" pour les lettres pas encore trouvées)
+        static void ShowMyWord() // Montre le mot de l'utilisateur (affiche les lettres trouvées et "_" pour les lettres pas encore trouvées)
         {
             foreach (string lettreToShow in myWordLetters)
             {
@@ -171,7 +171,7 @@ namespace jeupendu
             }
         }
 
-        static void GameOver() //Finit la partie (gagné ou perdu)
+        static void EndGame() //Finit la partie (gagné ou perdu)
         {
             if (goodLettersCounter == correctWordLetters.Count)
             {
@@ -182,10 +182,10 @@ namespace jeupendu
                 Console.WriteLine("PERDU !");
                 Console.WriteLine("Le mot à trouver était " + correctWord);
             }
-            retryOption();
+            RetryOption();
         }
 
-        static void retryOption()      
+        static void RetryOption()      
         {
             Console.WriteLine("Voulez-vous Retenter ou Quitter ? (1 ou 0)");
             string retry = Console.ReadLine();
@@ -197,7 +197,7 @@ namespace jeupendu
                 correctWordLetters.Clear();
                 myWordLetters.Clear();
                 wrongLettersList.Clear();
-                startGame();
+                StartGame();
             }
             else if (retry == "0")
             {
@@ -206,7 +206,7 @@ namespace jeupendu
             else
             {
                 Console.WriteLine("Entrez 0 ou 1 et rien d'autre");
-                retryOption();
+                RetryOption();
             }
         }
     }

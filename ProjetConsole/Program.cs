@@ -138,7 +138,7 @@ namespace jeupendu
         {
             int compteurWrongLetter = 0;
 
-            for (int index = 0; index < correctWordLetters.Count; index++) // r = index de la lettre à comparer (dans le mot à trouver)
+            for (int index = 0; index < correctWordLetters.Count; index++) // index de la lettre à comparer (dans le mot à trouver)
             {
                 if (myLetter == correctWordLetters[index])
                 {

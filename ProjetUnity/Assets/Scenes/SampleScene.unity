@@ -1855,8 +1855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b832279404bebf440b5ac3e556d8e7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potenceImage:
-  - {fileID: 2019390338}
+  potenceImage: {fileID: 2019390338}
   sprites:
   - {fileID: 21300000, guid: c355937a222d4644893886bd64c2f52c, type: 3}
   - {fileID: 21300000, guid: 15a9bdf51390b624cb93a784f0db03a8, type: 3}

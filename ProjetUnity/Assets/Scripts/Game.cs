@@ -7,7 +7,7 @@ using System;
 public class Game : MonoBehaviour
 {
     // ---------- UNITY ---------- //
-    public GameObject[] potenceImage; //image dans laquelle on va afficher les sprites du pendu
+    public GameObject potenceImage; //image dans laquelle on va afficher les sprites du pendu
     public Sprite[] sprites; //sprites du pendu
     public Sprite[] notes;
     public Text WordToFindText;
@@ -59,7 +59,7 @@ public class Game : MonoBehaviour
 
     void DisplayPendu(int i)
     {
-        potenceImage[0].transform.GetComponent<Image>().sprite = sprites[i];
+        potenceImage.transform.GetComponent<Image>().sprite = sprites[i];
     }
 
     void StartGame() //Lancement du jeu et préparation du mot à trouver

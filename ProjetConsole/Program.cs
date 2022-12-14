@@ -16,14 +16,14 @@ namespace jeupendu
         static List<string> wrongLettersList = new List<string>(); //contient toutes les lettres entrées qui ne sont pas dans le mot
         static int PV = 8; //nombre de chances dont le joueur dispose (PV -= 1 uniquement s'il a faux)
         static int goodLettersCounter = 0; //compte le nombre de lettres trouvées
-        static bool isApplication = true;
+        static bool isRunning = true;
         static bool letterIsValid = true;
 
         //--------------------------------------
 
         static void Main(string[] args)
         {
-            while (isApplication == true)
+            while (isRunning == true)
             {
                 StartGame();
                 //gameInProgress();
@@ -201,7 +201,7 @@ namespace jeupendu
             }
             else if (retry == "0")
             {
-                isApplication = false;
+                isRunning = false;
             }
             else
             {

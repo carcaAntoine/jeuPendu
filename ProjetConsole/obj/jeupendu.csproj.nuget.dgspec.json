@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Antoine\\Documents\\créations\\MYGProjet2\\jeupendu\\jeupendu.csproj": {}
+    "C:\\Users\\Antoine\\Documents\\GitHub\\jeuPendu\\ProjetConsole\\jeupendu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Antoine\\Documents\\créations\\MYGProjet2\\jeupendu\\jeupendu.csproj": {
+    "C:\\Users\\Antoine\\Documents\\GitHub\\jeuPendu\\ProjetConsole\\jeupendu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Antoine\\Documents\\créations\\MYGProjet2\\jeupendu\\jeupendu.csproj",
+        "projectUniqueName": "C:\\Users\\Antoine\\Documents\\GitHub\\jeuPendu\\ProjetConsole\\jeupendu.csproj",
         "projectName": "jeupendu",
-        "projectPath": "C:\\Users\\Antoine\\Documents\\créations\\MYGProjet2\\jeupendu\\jeupendu.csproj",
+        "projectPath": "C:\\Users\\Antoine\\Documents\\GitHub\\jeuPendu\\ProjetConsole\\jeupendu.csproj",
         "packagesPath": "C:\\Users\\Antoine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Antoine\\Documents\\créations\\MYGProjet2\\jeupendu\\obj\\",
+        "outputPath": "C:\\Users\\Antoine\\Documents\\GitHub\\jeuPendu\\ProjetConsole\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Antoine\\AppData\\Roaming\\NuGet\\NuGet.Config"
